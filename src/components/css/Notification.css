@@ -1,0 +1,180 @@
+/* Base styles for notification icon */
+.notifications {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.bell-icon {
+  font-size: 24px;
+  color: #000000; /* Change color if needed */
+  cursor: pointer;
+}
+
+.overlap-4 {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Styles for the notification pop-up */
+.notification-popup {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  max-width: 350px;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Header section of the pop-up */
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.popup-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #999;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #333;
+}
+
+/* Content section of the pop-up */
+.popup-content {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.popup-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.popup-item:last-child {
+  border-bottom: none;
+}
+
+.popup-message {
+  font-size: 16px;
+  color: #333;
+}
+
+.popup-date {
+  font-size: 14px;
+  color: #999;
+}
+
+.no-notifications {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+}
+
+/* Additional styles for different types of notifications */
+.notification.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.notification.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.notification.info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+.notification.warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+}
+
+.notification .title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.notification .message {
+  margin: 0;
+}
+
+/* Animations for showing and hiding notifications */
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.notification.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 600px) {
+  .notification-popup {
+    max-width: 90%;
+    padding: 0.5rem;
+  }
+
+  .popup-header h3 {
+    font-size: 16px;
+  }
+
+  .popup-message {
+    font-size: 14px;
+  }
+}

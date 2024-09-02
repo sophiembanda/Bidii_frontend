@@ -1,0 +1,254 @@
+.monthly-advance-credit {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+
+.main-content {
+    padding: 0;
+    margin-left: 0;
+}
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.table-header-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.fullscreen-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.fullscreen-icon {
+    font-size: 20px;
+    color: #007bff;
+}
+
+.add-record-button {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0B63F8;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.generate-form-button {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0B63F8;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.add-record-button:hover,
+.generate-form-button:hover {
+    background-color: #0056b3;
+}
+
+.add-record-icon {
+    margin-right: 8px;
+}
+
+.generate-form-icon {
+    margin-right: 8px;
+}
+
+/* Styles for the close button */
+.close-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px; /* Adjust width as needed */
+    height: 36px; /* Adjust height as needed */
+    border: 2px solid #dc3545;
+    border-radius: 50%; /* Makes the button circular */
+    background-color: #dc3545;
+    color: white;
+    font-size: 18px; /* Size of the icon */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    position: absolute;
+    top: 16px; /* Adjust top position */
+    right: 16px; /* Adjust right position */
+}
+
+.close-button:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+}
+
+.close-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.5);
+}
+
+.close-icon {
+    margin: 0;
+}
+
+/* Styles for the advance-display section */
+.advance-display {
+    position: relative;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    overflow: hidden; /* Ensures that content doesn’t overflow */
+}
+
+.advance-display .close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+/* Optional: Add a transition effect */
+.advance-display-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.advance-display-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.advance-display-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.advance-display-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 300ms, transform 300ms;
+}
+
+
+.table-header-container .generate-form-button {
+    background-color: red;
+    color: white;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.table {
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 100%;
+    display: table;
+    min-width: 600px;
+     /* table-layout: fixed; */
+}
+
+.table-header {
+    display: table-header-group;
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.table-header div {
+    display: table-cell;
+    padding: 8px;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-row div {
+    display: table-cell;
+    padding: 8px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.table-row:hover {
+    background-color: #f9f9f9;
+}
+
+.table-container:-webkit-full-screen,
+.table-container:-moz-full-screen,
+.table-container:-ms-fullscreen,
+.table-container:fullscreen {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background-color: #ffffff;
+}
+
+.table:-webkit-full-screen,
+.table:-moz-full-screen,
+.table:-ms-fullscreen,
+.table:fullscreen {
+    background-color: #ffffff;
+}
+
+/* For handling different screen sizes */
+@media (max-width: 1024px) {
+    .table {
+        min-width: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+    .table {
+        min-width: 600px;
+    }
+    
+    .table-header div,
+    .table-row div {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .table {
+        min-width: 400px;
+    }
+    
+    .table-header div,
+    .table-row div {
+        font-size: 10px;
+        padding: 4px;
+    }
+}
+}

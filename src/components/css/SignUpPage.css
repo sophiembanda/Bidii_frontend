@@ -1,0 +1,239 @@
+.signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #fbc2eb, #a6c0fe); /* Gradient background */
+}
+
+.signup-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  width: 100%;
+  max-width: 500px; /* Increased width for better layout */
+  text-align: center; /* Center align text */
+}
+
+.signup-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column; /* Ensure proper spacing for label and input */
+  text-align: left;
+}
+
+.input-group input, .input-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* Rounded input corners */
+  font-size: 1rem;
+}
+
+.input-group label {
+  margin-bottom: 0.5rem; /* Space between label and input */
+  font-weight: bold; /* Bold label text */
+}
+
+.password-group {
+  position: relative;
+}
+
+.password-container {
+  display: flex;
+  align-items: center;
+}
+
+.password-container input {
+  width: calc(100% - 2.5rem); /* Adjust width to accommodate the icon */
+  padding-right: 2.5rem; /* Space for the icon */
+}
+
+.eye-icon {
+  position: absolute;
+  right: 0.75rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #007bff;
+}
+
+.is-admin-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.is-admin-label {
+  margin-left: 0.5rem;
+}
+
+.terms-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.terms-group label {
+  margin-left: 0.5rem;
+}
+
+.signup-button {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.signup-button:disabled {
+  background-color: #0056b3;
+}
+
+.error-banner {
+  color: red;
+  margin-bottom: 1rem;
+}
+
+.success-banner {
+  color: green;
+  margin-bottom: 1rem;
+}
+
+.links {
+  margin-top: 1rem;
+}
+
+.link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For screens 1200px and below */
+@media (max-width: 1200px) {
+  .signup-container {
+    padding: 1.5rem;
+  }
+
+  .signup-title {
+    font-size: 2.25rem;
+  }
+
+  .input-group input, .input-group select {
+    font-size: 0.95rem;
+  }
+
+  .signup-button {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* For screens 992px and below */
+@media (max-width: 992px) {
+  .signup-container {
+    max-width: 400px;
+  }
+
+  .signup-title {
+    font-size: 2rem;
+  }
+
+  .input-group input, .input-group select {
+    font-size: 0.9rem;
+  }
+
+  .signup-button {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* For screens 768px and below */
+@media (max-width: 768px) {
+  .signup-container {
+    padding: 1rem;
+  }
+
+  .signup-title {
+    font-size: 1.75rem;
+  }
+
+  .input-group input, .input-group select {
+    font-size: 0.85rem;
+  }
+
+  .password-container input {
+    width: calc(100% - 2rem); /* Adjust for icon */
+  }
+
+  .eye-icon {
+    right: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .signup-button {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* For screens 576px and below */
+@media (max-width: 576px) {
+  .signup-container {
+    padding: 0.75rem;
+    max-width: 100%; /* Full width on very small screens */
+  }
+
+  .signup-title {
+    font-size: 1.5rem;
+  }
+
+  .input-group input, .input-group select {
+    font-size: 0.8rem;
+  }
+
+  .password-container input {
+    width: calc(100% - 1.5rem); /* Adjust for icon */
+  }
+
+  .eye-icon {
+    right: 0.25rem;
+    font-size: 0.85rem;
+  }
+
+  .signup-button {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .terms-group, .is-admin-group {
+    flex-direction: column; /* Stack checkbox and label */
+    align-items: flex-start;
+  }
+
+  .terms-group label, .is-admin-label {
+    margin-left: 0;
+  }
+}

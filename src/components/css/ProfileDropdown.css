@@ -1,0 +1,122 @@
+/* ProfileDropdown.css */
+
+.profile-dropdown-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-avatar {
+    margin-left: 16px;
+    font-size: 24px; /* Adjust size here if needed */
+    width: 40px; /* Ensure the size matches the notification icon */
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .profile-avatar-image {
+    width: 40px; /* Ensure the size matches the notification icon */
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .profile-avatar-placeholder {
+    font-size: 24px;
+    color: #9e9e9e;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-dropdown-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .profile-picture {
+    width: 40px; /* Adjust to match the avatar size */
+    height: 40px; /* Adjust to match the avatar size */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-username {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .profile-email {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
+  
+  .profile-role {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .profile-dropdown-options {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-option {
+    background: transparent;
+    border: none;
+    padding: 1rem;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .profile-option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .profile-option-icon {
+    font-size: 16px;
+  }
+  
+  /* Hide dropdown on small screens */
+  @media (max-width: 600px) {
+    .profile-dropdown-menu {
+      width: 100%;
+      right: 0;
+      border-radius: 0;
+    }
+  }
+  

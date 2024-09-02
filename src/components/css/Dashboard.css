@@ -1,0 +1,537 @@
+.admin {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #29F6EA;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.BIDII-MEN-AND-WOMEN {
+    font-size: 18px;
+    font-weight: bold;
+    color: #013CC6;
+}
+
+.text-wrapper-5 {
+    font-size: 18px;
+    font-weight: bold;
+    color: none;
+    margin-top: 8px;
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    color:#131313;
+    font-size: 18px;
+    position: relative;
+}
+
+.menu-item.active,
+.menu-item:hover {
+    /* background-color: #0B63F8; */
+    color: #0B63F8;
+    border-left: 3px solid #0B63F8
+}
+
+.menu-icon {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.submenu {
+    display: none; /* Initially hide the submenu */
+    flex-direction: column;
+    margin-left: 15px;
+    padding-top: 10px;
+    position: absolute;
+    top: 70%; 
+    left: 0; 
+    z-index: 1000;
+}
+  
+.submenu-item {
+    padding: 10px;
+    cursor: pointer;
+    color: #131313;
+    font-size: 18px;
+}
+
+.menu-item.active .submenu,
+.menu-item:hover .submenu {
+    display: flex; /* Show submenu when the main menu item is active or hovered */
+}
+
+  
+  .submenu-item.active,
+  .submenu-item:hover {
+    color: #0B63F8;
+    border-left: 3px solid #0B63F8; /* Active indicator color */
+  }
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 260px;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1; /* Light background color */
+    padding: 8px;
+    border-radius: 8px;
+    position: relative; /* Allows positioning of the icon within the bar */
+    
+}
+
+/* Styles for the search icon */
+.search-icon {
+    margin-right: 8px; /* Space between the icon and input */
+    font-size: 18px;
+    color: #000000; /* Icon color */
+    position: absolute; /* Allows for precise positioning */
+    right: 8px; /* Positions the icon to the right */
+}
+
+/* Styles for the search input */
+.search-input {
+    border: none; /* Remove default border */
+    background: none; /* No background color for the input field */
+    outline: none; /* Remove default outline */
+    font-size: 14px;
+    padding: 8px 32px 8px 8px; /* Add padding to the left for text and right for the icon */
+    width: 100%; /* Ensure the input takes up available space */
+    border-radius: 8px; /* Match border-radius of the search bar */
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-avatar-placeholder {
+  font-size: 24px; 
+  color: #9e9e9e; 
+  background-color: #e0e0e0; 
+  border-radius: 50%;
+  width: 40%;
+  /* height: auto; */
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-avatar {
+    margin-left: 16px;
+    font-size: 24px; 
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.content {
+    padding: 0 16px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.header h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between; /* Ensure equal distribution */
+  width: 100%; 
+  margin-bottom: 25px; /* Adjust margin as needed */
+}
+
+.stat-button {
+  flex: 1; /* Allow buttons to grow equally */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center; /* Center text in the button */
+  min-width: 120px; /* Ensure a minimum width for each button */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.stat-button.pink {
+  background-color: #EBABE4;
+  color: white;
+}
+
+.stat-button.blue {
+  background-color: #40C6C6;
+  color: white;
+}
+
+.stat-button.orange {
+  background-color: #E7AF1F;
+  color: white;
+}
+
+.stat-button.green {
+  background-color: #79CD0E;
+  color: white;
+}
+
+.welcome-message {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  position: relative;
+}
+
+.table-header-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+}
+
+.add-record-button {
+  margin-left: 2px;
+}
+.test-group-button, .add-record-button, .fullscreen-toggle-button {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    /* background-color: #0B63F8; */
+    color: none;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.add-record-button {
+  background-color: #0B63F8;
+  color: white;
+  margin-left: 5px;
+}
+.test-group-icon {
+    margin-right: 8px;
+}
+
+.table {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.table-header {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 40px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 80px;
+    align-items: center;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.table-row {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 40px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 80px;
+    padding: 8px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.table-row div, .table-row input {
+    padding: 4px 8px;
+  }
+  
+  .table-row input {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .table-row .action-icon {
+    cursor: pointer;
+  }
+  
+  .table-row .edit-icon {
+    margin-right: 8px;
+  }
+
+.table-container.fullscreen {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto; /* Allow scrolling if content overflows */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    background-color: #fff; /* Optional: Set a background color */
+  }
+  
+  .fullscreen-toggle-button {
+    /* Style the fullscreen toggle button */
+    background-color: #0B63F8;
+    color: #ffffff;
+    margin-left: 2px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .fullscreen-toggle-button:hover {
+    color: #007bff; /* Change color on hover */
+  }
+
+  .fullscreen-toggle-button:active {
+    transform: scale(0.9); /* Slightly scale down on click */
+  }
+
+  .fullscreen-icon-container {
+    position: absolute;
+    right: 10px; /* Adjust right position to push the icon to the right side */
+    z-index: 10; /* Ensure the icon is above other content */
+  }
+  
+
+.row-checkbox {
+    margin-right: 10px;
+    pointer-events: auto;
+    position: relative;
+    z-index: 10;
+}
+
+.group-number {
+    color: #007bff;
+}
+
+.action-icon {
+    cursor: pointer;
+    margin-left: 8px;
+}
+
+.edit-icon {
+    color: #ffc107;
+}
+
+.delete-icon {
+    color: #dc3545;
+}
+
+.table-row:hover {
+    background-color: #f9f9f9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .table-container {
+        padding: 8px;
+    }
+
+    .table-header-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .test-group-button,
+    .add-record-button {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .table-header {
+        font-size: 14px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .table-row {
+        font-size: 14px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .table-row div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .group-number {
+        font-size: 14px;
+    }
+    .search-bar {
+        padding: 6px;
+    }
+    
+    .search-icon {
+        font-size: 16px;
+    }
+    
+    .search-input {
+        font-size: 13px;
+        padding: 6px 32px 6px 6px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .fullscreen-icon-container {
+        /* top: 5px; Adjust top position for smaller screens */
+        right: 5px; /* Adjust right position for smaller screens */
+        position: relative;
+        left: 4px;
+      }
+    
+      .fullscreen-toggle-button {
+        font-size: 20px; /* Smaller icon size for smaller screens */
+      }
+    .table-container {
+        padding: 4px;
+    }
+
+    .table-header-container {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .test-group-button,
+    .add-record-button {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .table-header {
+        font-size: 12px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .table-row {
+        font-size: 12px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .table-row div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .group-number {
+        font-size: 12px;
+    }
+    .search-bar {
+        padding: 5px;
+    }
+    
+    .search-icon {
+        font-size: 14px;
+    }
+    
+    .search-input {
+        font-size: 20px;
+        padding: 5px 28px 0 5px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .table-container {
+        padding: 2px;
+    }
+
+    .table-header-container {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .test-group-button,
+    .add-record-button {
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+
+    .table-header {
+        font-size: 10px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .table-row {
+        font-size: 10px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .table-row div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .group-number {
+        font-size: 10px;
+    }
+    .search-bar {
+        padding: 4px;
+    }
+    
+    .search-icon {
+        font-size: 12px;
+    }
+    
+    .search-input {
+        font-size: 11px;
+        padding: 4px 24px 4px 4px; /* Adjust padding for very small screens */
+    }
+}

@@ -1,0 +1,253 @@
+.advance-table {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+  .main-content {
+    padding: 0;
+    margin-left: 0; /* Ensures no margin on the left */
+  }
+  
+  .table-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0; /* Removed padding */
+  }
+  
+  .table-header-container {
+    display: flex;
+    justify-content: space-between; /* Aligns items to the edges */
+    margin-bottom: 8px;
+    width: 100%;
+  }
+  
+  .fullscreen-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto; /* Pushes the button to the right */
+  }
+  
+  .fullscreen-icon {
+    font-size: 20px;
+    color: #007bff; /* Adjust color as needed */
+  }
+  
+  .add-record-button {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0B63F8; /* Blue color for the button */
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .generate-form-button {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0B63F8; /* Blue color for the button */
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-record-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .add-record-icon {
+    margin-right: 8px;
+  }
+
+  .generate-form-icon {
+    margin-right: 8px;
+  }
+
+  .table-header-container .generate-form-button {
+    background-color: red;
+    color: white;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto; /* Allows horizontal scrolling */
+    width: 100%;
+  }
+  
+  .table {
+    background-color: #ffffff; /* White background for the table */
+    border-radius: 8px;
+    width: 100%; /* Ensure full width */
+    display: table;
+    min-width: 600px; 
+     /* table-layout: fixed; */
+  }
+  
+  .table-header {
+    display: table-header-group; /* Ensures headers align with rows */
+    background-color: #007bff; /* Blue header background */
+    color: #ffffff; /* White text color */
+    font-weight: bold;
+  }
+  
+  .table-header div {
+    display: table-cell;
+    padding: 8px; /* Adjusted padding */
+  }
+  
+  .table-row {
+    display: table-row; /* Ensures rows align with headers */
+  }
+  
+  .table-row div {
+    display: table-cell; /* Aligns cells within rows */
+    padding: 8px;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  
+  .table-row:hover {
+    background-color: #f9f9f9; /* Light gray background on hover */
+  }
+  
+  /* Fullscreen mode styles */
+  .table-container:-webkit-full-screen,
+  .table-container:-moz-full-screen,
+  .table-container:-ms-fullscreen,
+  .table-container:fullscreen {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background-color: #ffffff; /* White background for fullscreen container */
+  }
+  
+  
+  .table:-webkit-full-screen,
+  .table:-moz-full-screen,
+  .table:-ms-fullscreen,
+  .table:fullscreen {
+    background-color: #ffffff; /* White background for fullscreen table */
+  }
+  
+  input[type="number"] {
+    width: 80%; /* Reduced width of the input box */
+    max-width: 300px; /* Maximum width to avoid it becoming too wide */
+    padding: 8px; /* Adequate padding for readability */
+    border: 1px solid #ccc; /* Light border for the input field */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size for better readability */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for focus state */
+  }
+
+  input[type="number"]:focus {
+      border-color: #007bff; /* Blue border color on focus */
+      box-shadow: 0 0 4px rgba(0, 123, 255, 0.5); /* Subtle shadow effect on focus */
+      outline: none; /* Remove default focus outline */
+  }
+
+  input[type="number"]::placeholder {
+      color: #aaa; /* Placeholder text color */
+      font-size: 16px; /* Match placeholder text size with input text size */
+  }
+
+  /* .table-container:-webkit-full-screen {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background-color: #ffffff;
+    top: 0;
+    left: 0;
+    overflow: auto;
+  }
+
+  .table-container:-moz-full-screen {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      background-color: #ffffff;
+      top: 0;
+      left: 0;
+      overflow: auto;
+  }
+
+  .table-container:-ms-fullscreen {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      background-color: #ffffff;
+      top: 0;
+      left: 0;
+      overflow: auto;
+  }
+
+  .table-container:fullscreen {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      background-color: #ffffff;
+      top: 0;
+      left: 0;
+      overflow: auto;
+  } */
+  /* For handling different screen sizes */
+  @media (max-width: 1024px) {
+    .table {
+      min-width: 800px; /* Adjusted for medium screens */
+    }
+    input[type="number"] {
+      width: 70%; /* Further reduce width for medium screens */
+      max-width: 250px; /* Adjust maximum width for medium screens */
+   }
+  }
+  
+  @media (max-width: 768px) {
+    .table {
+      min-width: 600px; /* Adjusted for small screens */
+    }
+    
+    .table-header div,
+    .table-row div {
+      font-size: 12px; /* Adjusted font size */
+    }
+    input[type="number"] {
+      width: 60%; /* Further reduce width for small screens */
+      max-width: 200px; /* Adjust maximum width for small screens */
+  }
+  }
+  
+  @media (max-width: 480px) {
+    .table {
+      min-width: 400px; /* Further reduced for very small screens */
+    }
+    
+    .table-header div,
+    .table-row div {
+      font-size: 10px; /* Further adjusted font size */
+      padding: 4px; /* Further reduced padding */
+    }
+    input[type="number"] {
+      width: 100%; /* Full width for very small screens */
+      max-width: none; /* Remove maximum width constraint for very small screens */
+  }
+  }
+}

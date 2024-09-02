@@ -1,0 +1,137 @@
+.form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1000; /* Ensure it appears above other content */
+  }
+  
+  .form-container {
+    position: relative;
+    background-color: #fff; /* Background color for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    max-width: 600px; /* Maximum width of the form */
+    width: 90%; /* Responsive width */
+    height: auto; /* Adjust height to content */
+    max-height: 90%; /* Maximum height */
+    overflow-y: auto; /* Allow vertical scrolling */
+    box-sizing: border-box;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 20px;
+    color: #333; /* Heading color */
+    text-align: center; /* Center align heading */
+  }
+  
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container label {
+    display: block;
+    margin-bottom: 15px;
+    color: #555; /* Label color */
+  }
+  
+  .form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .submit-button,
+  .cancel-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  .submit-button {
+    background-color: #007bff; /* Primary color */
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  .cancel-button {
+    background-color: #6c757d; /* Secondary color */
+    margin-left: 10px;
+  }
+  
+  .cancel-button:hover {
+    background-color: #5a6268; /* Darker shade on hover */
+  }
+  
+  /* Responsive Design */
+  
+  @media (max-width: 1200px) {
+    .form-container {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .form-container {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .form-container {
+      width: 95%;
+    }
+  
+    form label {
+      font-size: 14px;
+    }
+  
+    form input {
+      padding: 8px;
+    }
+  
+    .submit-button,
+    .cancel-button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .form-container {
+      width: 100%;
+      height: auto; /* Adjust height to content */
+    }
+  
+    form label {
+      font-size: 12px;
+    }
+  
+    form input {
+      padding: 6px;
+    }
+  
+    .submit-button,
+    .cancel-button {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+  }
+  
