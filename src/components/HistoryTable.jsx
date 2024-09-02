@@ -15,7 +15,6 @@ const HistoryTable = () => {
   const [selectedFilter, setSelectedFilter] = useState("all"); // State to track selected filter
   const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
-
   // Fetch all history data initially
   const fetchHistoryData = useCallback(async () => {
     const token = localStorage.getItem("authToken");
@@ -37,7 +36,7 @@ const HistoryTable = () => {
     } else {
       console.warn("No auth token found.");
     }
-  },[apiUrl]);
+  }, [apiUrl]);
 
   useEffect(() => {
     fetchHistoryData();
@@ -48,7 +47,6 @@ const HistoryTable = () => {
     const token = localStorage.getItem("authToken");
 
     if (filter === "performance") {
-      // Fetch data from the /histories endpoint when Group Monthly Performance is clicked
       axios
         .get(`${apiUrl}/histories`, {
           headers: {
@@ -62,7 +60,6 @@ const HistoryTable = () => {
           console.error("Error fetching monthly performance data:", error);
         });
     } else if (filter === "advance") {
-      // Fetch data from the /query_advance_summary endpoint when Group Advance Performance is clicked
       axios
         .get(`${apiUrl}/query_advance_summary`, {
           headers: {
@@ -76,7 +73,6 @@ const HistoryTable = () => {
           console.error("Error fetching advance performance data:", error);
         });
     } else {
-      // Fetch data from both endpoints when Show All is clicked
       const performanceRequest = axios.get(`${apiUrl}/histories`, {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -89,7 +85,6 @@ const HistoryTable = () => {
         },
       });
 
-      // Run both requests concurrently
       Promise.all([performanceRequest, advanceRequest])
         .then(([performanceResponse, advanceResponse]) => {
           setFilteredData([...performanceResponse.data, ...advanceResponse.data]); // Combine both sets of data
@@ -101,7 +96,7 @@ const HistoryTable = () => {
   };
 
   const handleSortIconClick = () => {
-    setSortMenuVisible((prev) => !prev); // Toggle the visibility of the sort menu
+    setSortMenuVisible((prev) => !prev);
   };
 
   const handleRowClick = (id) => {
@@ -135,6 +130,7 @@ const HistoryTable = () => {
               <div className="table-header-title">
                 <FontAwesomeIcon icon={faTable} className="table-icon" />
                 <h2>History Table</h2>
+                <span className="filter-info">Current Filter: {selectedFilter}</span>
                 <div className="header-icons">
                   <FontAwesomeIcon
                     icon={faSort}
@@ -200,6 +196,9 @@ const HistoryTable = () => {
                   <div>{entry.date}</div>
                 </div>
               ))}
+            </div>
+            <div className="footer-info">
+              Total Entries: {historyData.length}
             </div>
           </div>
         </div>

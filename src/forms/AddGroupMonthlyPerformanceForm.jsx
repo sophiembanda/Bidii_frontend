@@ -62,7 +62,7 @@ const AddGroupMonthlyPerformanceForm = ({ onClose, group_id, token, group_name }
                     'Content-Type': 'application/json',
                 }
             });
-            // console.log('Success:', response.data);
+            console.log('Success:', response.data);
             onClose(); // Close the form on successful submission
         } catch (error) {
             // console.error('Error:', error.response?.data || error.message); // Log detailed error response
